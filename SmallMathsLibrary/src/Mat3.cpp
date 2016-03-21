@@ -56,16 +56,6 @@ namespace math
 
 	math::Mat3 Mat3::transpose()
 	{
-		// swapping around the rows and columns (diagonal reflection)
-		// before:
-		//	|	a	b	c	|
-		//	|	d	e	f	|
-		//	|	g	h	i	|
-		// after:
-		//	|	a	d	g	|
-		//	|	b	e	h	|
-		//	|	c	f	i	|
-
 		math::Mat3 t;
 		t.m[0][0] = m[0][0];
 		t.m[0][1] = m[1][0];
@@ -81,7 +71,6 @@ namespace math
 
 	bool Mat3::equals(const math::Mat3 compairToMatrix)
 	{
-		// might be a 'smarter' way of doing this with  & or | maybe.. might want to look into it
 		if (m[0][0] == compairToMatrix.m[0][0]) {} else return false;
 		if (m[0][1] == compairToMatrix.m[0][1]) {} else return false;
 		if (m[0][2] == compairToMatrix.m[0][2]) {} else return false;
@@ -113,27 +102,6 @@ namespace math
 
 	math::Mat3 Mat3::inverse()
 	{
-		// the matrix at the start
-		//	|	a	b	c	|
-		//	|	d	e	f	|
-		//	|	g	h	i	|
-		//
-		// need to find the determinant
-		// for each element make a MoM (Matrix of Minors)
-		//	|	|e f| |d f|	|d e|	|
-		//	|	|h i|	|g i|	|g h|	|
-		//	|										|
-		//  | |b c|	|a c|	|a b|	|
-		//	|	|h i|	|g i|	|g h|	|
-		//	|										|
-		//	|	|b c|	|a c|	|a b|	|
-		//	|	|e f|	|d f|	|d e|	|
-		//
-		// need to now bring this all together (cofactor matrix)
-		//  |	+ - +	|
-		//  | - + - |
-		//	| + - + |
-
 		float id = 1;
 		math::Mat3 temp(id);
 

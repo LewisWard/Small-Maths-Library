@@ -11,7 +11,7 @@
 namespace math
 {
 	//----------------------------------------------------------------------------------------------------------------------
-	/// \brief  Matrix 3x3, I could of used and thought about using 
+	/// \brief  Matrix 3x3
 	//----------------------------------------------------------------------------------------------------------------------
 	class Mat3
 	{
@@ -100,7 +100,7 @@ namespace math
 		/// \brief  inverse the matrix
 		/// \return	math::Mat3 matrix that the inverse was applied to
 		//----------------------------------------------------------------------------------------------------------------------
-		math::Mat3 inverse(); 		// might also want to see if I can also make a fast inverse method
+		math::Mat3 inverse();
 
 		//----------------------------------------------------------------------------------------------------------------------
 		/// \brief  rotate matrix on the X axis

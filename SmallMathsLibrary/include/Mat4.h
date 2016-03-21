@@ -125,7 +125,7 @@ namespace math
 		/// \brief  inverse the matrix
 		/// \return	math::Mat3 matrix that the inverse was applied to
 		//----------------------------------------------------------------------------------------------------------------------
-		math::Mat4 inverse(); 		// might also want to see if I can also make a fast inverse method
+		math::Mat4 inverse();
 
 		//----------------------------------------------------------------------------------------------------------------------
 		/// \brief  rotate matrix on the X axis

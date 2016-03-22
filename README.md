@@ -5,15 +5,16 @@ This maths library is to provide a common set of maths classes (i.e. vectors) us
 When I wrote this I was targeting OpenGL so the Martix class uses column-major matrices as used in the OpenGL Specification, so if your API uses row-major you may need to convert.
 
 ###Install/Setup:
-As the library is a small collection of .h and .cpp files all you will need to do is include them into your project. To get most of the library to be included just do:
+As the library is a small collection of .h and .cpp files all you will need to do is include them into your project. To get the whole library to be included just do:
 
 ``` C++
-#include "Quat.h" 
+#include "Maths.h" 
 ```
 
-This will include everything apart from AABB's which you will need to include separtatly if you want to use them:
+If you would rather use a part of the library you can do, for example you only want Vectors and Martix classes, you can just include the parts you would like:
 ``` C++ 
-#include "AABB.h" 
+#include "AABB.h" // includes AABB class
+#include "Mat4.h" // includes Mat4, Mat3, Vec3, Vec2 classes
 ```
 
 ###How to use:
